@@ -7,26 +7,36 @@ import "./assets/img/4geeks.ico";
 //write your code here"
 
 function generateName() {
-  let subject = ["Johanna", "Jessica", "Nicole", "Elizabeth"];
-  let pronoun = ["is", "must be"];
-  let adjetive = ["beautiful", "nice", "cool", "pretty"];
+  let subject = [
+    "bananas",
+    "rockwell",
+    "shop",
+    "icecream",
+    "geeks",
+    "gorilla",
+    "sky",
+    "rainbow"
+  ];
+  let pronoun = [
+    "blue",
+    "green",
+    "cool",
+    "happy",
+    "normal",
+    "heated",
+    "lovely",
+    "true",
+    "fake",
+    "strong"
+  ];
 
-  let subjIndex = Math.floor(Math.random() * subject.length);
   let proIndex = Math.floor(Math.random() * pronoun.length);
-  let adjIndex = Math.floor(Math.random() * adjetive.length);
+  let subjIndex = Math.floor(Math.random() * subject.length);
 
-  let result =
-    " " +
-    subject[subjIndex] +
-    " " +
-    pronoun[proIndex] +
-    " " +
-    adjetive[adjIndex];
+  let result = " " + pronoun[proIndex] + "" + subject[subjIndex];
 
   return result;
 }
 window.onload = function() {
-  document.getElementById("name").innerHTML = generateName();
+  document.getElementById("random-name").innerHTML = generateName() + ".com";
 };
-
-console.log("Hello Rigo from the console!");
